@@ -333,6 +333,8 @@ This project is for educational purposes.
 ## 👨‍💻 Authors
 
 - Mohit Sahoo
+- Aamir Ibrahim
+- Anish Agrawal
 
 ---
 
