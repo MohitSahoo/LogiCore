@@ -6,7 +6,10 @@ import productsRouter from './routes/products.js';
 import suppliersRouter from './routes/suppliers.js';
 import ordersRouter from './routes/orders.js';
 import reportsRouter from './routes/reports.js';
-import unifiedRouter from './routes/unified.js';
+import authRouter from './routes/auth.js';
+import aiReportsRouter from './routes/aiReports.js';
+import adminRouter from './routes/admin.js';
+
 import { pool } from './db.js';
 import { connectMongoDB } from './mongodb.js';
 
@@ -15,7 +18,7 @@ import { connectMongoDB } from './mongodb.js';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 const host = process.env.HOST || '127.0.0.1';
 
 // Initialize MongoDB connection
@@ -45,14 +48,17 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Smart Supply Chain API is running' });
+  res.json({ message: 'LogiCore API is running' });
 });
 
 app.use('/api/products', productsRouter);
 app.use('/api/suppliers', suppliersRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/reports', reportsRouter);
-app.use('/api/unified', unifiedRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/ai-reports', aiReportsRouter);
+app.use('/api/admin', adminRouter);
+
 
 app.use((err, req, res, next) => {
   console.error(err);

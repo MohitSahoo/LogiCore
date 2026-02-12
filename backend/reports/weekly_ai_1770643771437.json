@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1770643771437",
+    "type": "weekly",
+    "period": "2026-02-02 to 2026-02-09",
+    "generatedAt": "2026-02-09T13:29:31.437Z",
+    "userId": 1,
+    "aiStatus": {
+      "keyUsed": "primary",
+      "usingFallback": false,
+      "primaryFailures": 0
+    },
+    "dataSnapshot": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "ordersInPeriod": 0,
+      "criticalAlerts": 0,
+      "stockHealth": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0,
+        "normalPercent": 0,
+        "lowStockPercent": 0,
+        "outOfStockPercent": 0,
+        "overstockPercent": 0
+      },
+      "financialMetrics": {
+        "turnoverRisk": "Low",
+        "capitalTiedUp": 0,
+        "reorderInvestment": 0
+      },
+      "topPerformers": [],
+      "criticalItems": 0
+    },
+    "optimizations": {
+      "promptTokensUsed": 1189,
+      "analysisDepth": 7,
+      "cacheUsed": false,
+      "generationTime": 11819
+    }
+  },
+  "content": "**Weekly Inventory Report: 2026-02-02 to 2026-02-09**\n\n**To:** Management Team\n**From:** [Your Name/Inventory Analyst Department]\n**Date:** 2026-02-09\n**Subject:** Critical Inventory Status and Strategic Recommendations\n\n**1. Executive Summary: Inventory Health at Ground Zero**\n\nThis week's inventory report highlights a critical situation: we currently hold **no products whatsoever**, resulting in a total inventory value of $0. Consequently, there were no sales recorded, and no orders processed during this period. This isn't an issue of poor stock management, but rather a complete absence of product to manage or sell. Our inventory health is effectively at \"ground zero,\" indicating a fundamental lack of operational capacity for product-based business activities.\n\n**2. Urgent Issues Requiring Immediate Attention**\n\nThe most pressing issue is the **complete absence of salable inventory**. Without products, we cannot generate revenue, fulfill customer demand, or establish market presence. This situation demands immediate strategic action to define and acquire our initial product offerings.\n\n**3. Understanding Our \"Stock Distribution\"**\n\nWith zero products, our \"stock distribution\" means we have:\n*   **0% Overstocked:** No capital tied up in excess, but also no products to sell.\n*   **0% Running Low:** No risk of stockouts, but also no stock to run low on.\n*   **100% Out of Stock:** Every potential product is unavailable.\n*   **0% Optimal Stock Levels:** No products to manage optimally.\n\nIn essence, this distribution signifies a **non-operational product supply chain**. We have no capacity to meet any potential customer demand, leading to zero revenue generation from product sales.\n\n**4. Actionable Recommendations & Priorities**\n\nGiven the current state, our recommendations focus on establishing the foundational elements of our product business:\n\n*   **Priority 1: Define Product Strategy & Sourcing (Immediate Action)**\n    *   **Action:** Urgently finalize the product catalog. Identify and onboard key suppliers for our initial product",
+  "rawData": {
+    "currentInventory": [],
+    "inventorySummary": [
+      {
+        "total_products": "0",
+        "total_inventory_value": null,
+        "average_price": null,
+        "total_units": null,
+        "out_of_stock_count": "0",
+        "low_stock_count": "0",
+        "overstock_count": "0"
+      }
+    ],
+    "ordersInPeriod": [],
+    "topSellingProducts": [],
+    "supplierPerformance": [
+      {
+        "name": "Workflow Test Supplier",
+        "contact_email": null,
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "stockAlerts": []
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "avgPrice": 0
+    },
+    "stockStatus": {
+      "normal": 0,
+      "lowStock": 0,
+      "outOfStock": 0,
+      "overstock": 0,
+      "normalPercent": 0,
+      "lowStockPercent": 0,
+      "outOfStockPercent": 0,
+      "overstockPercent": 0
+    },
+    "topProducts": [],
+    "criticalAlerts": [],
+    "topSuppliers": [
+      {
+        "name": "Workflow Test Supplier",
+        "contact_email": null,
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "periodActivity": {
+      "totalOrders": 0,
+      "totalOrderValue": 0,
+      "topSelling": "None"
+    },
+    "financial": {
+      "turnoverRisk": "Low",
+      "capitalTiedUp": 0,
+      "reorderInvestment": 0
+    }
+  }
+}

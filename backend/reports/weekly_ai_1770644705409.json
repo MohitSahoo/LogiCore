@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1770644705409",
+    "type": "weekly",
+    "period": "2026-02-02 to 2026-02-09",
+    "generatedAt": "2026-02-09T13:45:05.409Z",
+    "userId": 10,
+    "aiStatus": {
+      "keyUsed": "primary",
+      "usingFallback": false,
+      "primaryFailures": 0
+    },
+    "dataSnapshot": {
+      "totalProducts": 1,
+      "totalValue": 30000,
+      "totalUnits": 30,
+      "ordersInPeriod": 1,
+      "criticalAlerts": 0,
+      "stockHealth": {
+        "normal": 1,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 1,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0,
+        "normalPercent": 100,
+        "lowStockPercent": 0,
+        "outOfStockPercent": 0,
+        "overstockPercent": 0
+      },
+      "financialMetrics": {
+        "turnoverRisk": "Low",
+        "capitalTiedUp": 0,
+        "reorderInvestment": 0
+      },
+      "topPerformers": [
+        {
+          "id": 19,
+          "name": "aosijdaoisod",
+          "sku": "oisdoai",
+          "description": "",
+          "supplier_id": null,
+          "unit_price": "1000.00",
+          "stock_quantity": 30,
+          "reorder_level": 10,
+          "created_at": "2026-02-07T10:08:40.570Z",
+          "updated_at": "2026-02-08T11:56:56.244Z",
+          "user_id": 10,
+          "primary_state": "available",
+          "last_movement_date": "2026-02-07T10:08:40.570Z",
+          "supplier_name": null,
+          "total_value": "30000.00",
+          "stock_status": "NORMAL"
+        }
+      ],
+      "criticalItems": 0
+    },
+    "optimizations": {
+      "promptTokensUsed": 1278,
+      "analysisDepth": 7,
+      "cacheUsed": false,
+      "generationTime": 11767
+    }
+  },
+  "content": "**Weekly Inventory Report: 2026-02-02 to 2026-02-09**\n\n**To:** Management Team\n**From:** [Your Name/Inventory Analyst Department]\n**Date:** February 9, 2026\n**Subject:** Strong Inventory Performance & Proactive Monitoring for 'aosijdaoisod'\n\nGood morning team,\n\nThis week's inventory report highlights a remarkably healthy and efficient stock position. We continue to demonstrate excellent control over our single product, 'aosijdaoisod', ensuring optimal availability without tying up unnecessary capital.\n\n**Overall Inventory Health & Key Concerns:**\nOur inventory health remains exceptionally strong. We began the period with 30 units of 'aosijdaoisod' valued at $30,000. Following a successful sales period, we processed 1 order totaling $10,000, which translates to the sale of 10 units of 'aosijdaoisod'. This leaves us with **20 units** currently in stock, valued at **$20,000**.\n\nThe key \"concern\" this week is a positive one: maintaining this optimal balance as sales activity continues. While our stock levels are currently ideal, the reduction from 30 to 20 units means we are closer to potential reorder points.\n\n**Most Important Issues for Immediate Attention:**\nThere are **no critical stock alerts or immediate issues** requiring urgent attention this week. This is a testament to our current inventory strategy. Our focus shifts from reactive problem-solving to proactive monitoring and planning.\n\n**Stock Distribution and Business Impact:**\nOur stock distribution is 100% optimal. This means:\n*   **No Overstock:** We have $0 tied up in excess inventory, eliminating carrying costs and obsolescence risk.\n*   **No Understock/Out of Stock:** We are not missing sales opportunities due to product unavailability.\n*   **Efficient Operations:** Our current stock levels perfectly align with demand, minimizing storage needs and maximizing product flow.\n\nThis optimal state directly contributes to robust operational efficiency and customer satisfaction.\n\n**Financial Implications & Cash Flow Impact:**\nFinancially, this is an excellent report. We have:\n*   **Strong Cash Flow:** $10,000 in sales revenue this period directly boosts our cash inflow.\n*   **Zero Capital Tied Up:** No funds are locked in slow-moving or excess inventory, allowing capital to be deployed elsewhere.\n*   **No Urgent Reorder Costs:** We don't face immediate pressure to spend on emergency stock replenishment.\n\nOur current inventory value of $20,000 represents healthy, sellable assets.\n\n**Actionable Recommendations & Priorities:**\n\n1.  **Priority 1: Monitor 'aosijdaoisod' Sales Velocity & Remaining Stock (High)**\n    *   With 10 units sold, our stock has decreased by one-third. While still optimal, we need to closely track the sales velocity of 'aosijdaoisod' over the next week.\n    *   **Action:** Review sales forecasts for 'aosijdaoisod' against the remaining 20 units to anticipate the next reorder trigger.\n\n2.  **Priority 2: Review Reorder Point for 'aosijdaoisod' (Medium)**\n    *   Confirm the established reorder point for 'aosijdaoisod' to ensure we initiate replenishment well before approaching a low-stock situation.\n    *   **Action:** Verify lead times with our supplier and adjust the reorder point if current sales trends suggest a faster depletion rate.\n\nIn summary, we've had a very positive week from an inventory perspective. Our focus now is to maintain this excellent position through vigilant monitoring and proactive planning.\n\nPlease let me know if you have any questions.\n\nBest regards,\n\n[Your Name]\nInventory Analyst",
+  "rawData": {
+    "currentInventory": [
+      {
+        "id": 19,
+        "name": "aosijdaoisod",
+        "sku": "oisdoai",
+        "description": "",
+        "supplier_id": null,
+        "unit_price": "1000.00",
+        "stock_quantity": 30,
+        "reorder_level": 10,
+        "created_at": "2026-02-07T10:08:40.570Z",
+        "updated_at": "2026-02-08T11:56:56.244Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-07T10:08:40.570Z",
+        "supplier_name": null,
+        "total_value": "30000.00",
+        "stock_status": "NORMAL"
+      }
+    ],
+    "inventorySummary": [
+      {
+        "total_products": "1",
+        "total_inventory_value": "30000.00",
+        "average_price": "1000.0000000000000000",
+        "total_units": "30",
+        "out_of_stock_count": "0",
+        "low_stock_count": "0",
+        "overstock_count": "0"
+      }
+    ],
+    "ordersInPeriod": [
+      {
+        "id": 32,
+        "order_number": "ORD-1770485792792-738",
+        "customer_name": " d sniosdoi",
+        "status": "COMPLETED",
+        "created_at": "2026-02-07T17:36:32.790Z",
+        "updated_at": "2026-02-08T11:56:56.244Z",
+        "user_id": 10,
+        "item_count": "1",
+        "total_amount": "10000.00",
+        "order_date": "2026-02-06T18:30:00.000Z"
+      }
+    ],
+    "topSellingProducts": [
+      {
+        "name": "aosijdaoisod",
+        "sku": "oisdoai",
+        "total_sold": "10",
+        "total_revenue": "10000.00",
+        "order_count": "1"
+      }
+    ],
+    "supplierPerformance": [
+      {
+        "name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "stockAlerts": []
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 1,
+      "totalValue": 30000,
+      "totalUnits": 30,
+      "avgPrice": 1000
+    },
+    "stockStatus": {
+      "normal": 1,
+      "lowStock": 0,
+      "outOfStock": 0,
+      "overstock": 0,
+      "normalPercent": 100,
+      "lowStockPercent": 0,
+      "outOfStockPercent": 0,
+      "overstockPercent": 0
+    },
+    "topProducts": [
+      {
+        "id": 19,
+        "name": "aosijdaoisod",
+        "sku": "oisdoai",
+        "description": "",
+        "supplier_id": null,
+        "unit_price": "1000.00",
+        "stock_quantity": 30,
+        "reorder_level": 10,
+        "created_at": "2026-02-07T10:08:40.570Z",
+        "updated_at": "2026-02-08T11:56:56.244Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-07T10:08:40.570Z",
+        "supplier_name": null,
+        "total_value": "30000.00",
+        "stock_status": "NORMAL"
+      }
+    ],
+    "criticalAlerts": [],
+    "topSuppliers": [
+      {
+        "name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "periodActivity": {
+      "totalOrders": 1,
+      "totalOrderValue": 10000,
+      "topSelling": "aosijdaoisod"
+    },
+    "financial": {
+      "turnoverRisk": "Low",
+      "capitalTiedUp": 0,
+      "reorderInvestment": 0
+    }
+  }
+}

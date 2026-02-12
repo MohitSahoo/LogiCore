@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "id": "weekly_data_1766766601618",
+    "type": "weekly",
+    "period": "2025-12-19 to 2025-12-26",
+    "generatedAt": "2025-12-26T16:30:01.618Z",
+    "dataSnapshot": {
+      "totalProducts": "8",
+      "totalValue": 35207.85,
+      "ordersInPeriod": 0,
+      "criticalAlerts": 1
+    }
+  },
+  "content": "\n# Weekly Inventory Report\n**Period:** 2025-12-19 to 2025-12-26\n**Generated:** 12/26/2025, 10:00:01 PM\n\n## 📊 EXECUTIVE SUMMARY\n\n**Portfolio Overview:**\n- Total Products: 8\n- Total Inventory Value: 35,207.85\n- Average Product Price: 246.74\n- Total Units in Stock: 676\n\n**Critical Status:**\n- Out of Stock Items: 1\n- Low Stock Items: 1\n- Overstock Items: 6\n\n## 🚨 CRITICAL ALERTS\n\n**Business Laptop Pro** (LAPTOP-001): 0 units (reorder at 5)\n- Supplier: TechParts Inc (contact@techparts.com)\n- Reorder Cost: 6,499.95\n\n## 📈 ORDER ANALYSIS\n\n**Period Performance:**\n- Total Orders: 0\n- Total Order Value: 0\n- Average Order Value: 0.00\n\n**Top Selling Products:**\nNo sales data available for this period.\n\n## 🏢 SUPPLIER PERFORMANCE\n\n**TechParts Inc**\n- Products: 2\n- Portfolio Value: 17,499.65\n- Low Stock Products: 1\n- Contact: contact@techparts.com\n\n**Global Electronics**\n- Products: 4\n- Portfolio Value: 9,232.2\n- Low Stock Products: 0\n- Contact: hello@globalelec.com\n\n**Component Masters**\n- Products: 2\n- Portfolio Value: 8,476\n- Low Stock Products: 0\n- Contact: sales@compmasters.com\n\n## 💡 RECOMMENDATIONS\n\n**Immediate Actions (Next 7 Days):**\n- Contact suppliers for 1 out-of-stock/low-stock items\n- Place urgent orders for critical products\n- Review reorder levels for frequently depleted items\n\n**Strategic Improvements:**\n- Implement automated reorder alerts\n- Review supplier lead times and reliability\n- Optimize inventory levels based on demand patterns\n- Consider safety stock for critical products\n\n---\n*This report was generated automatically using real-time inventory data.*\n",
+  "rawData": {
+    "currentInventory": [
+      {
+        "id": 4,
+        "name": "27\" 4K Monitor",
+        "sku": "MONITOR-001",
+        "description": "Professional 4K display",
+        "supplier_id": 1,
+        "unit_price": "499.99",
+        "stock_quantity": 35,
+        "reorder_level": 10,
+        "created_at": "2025-12-08T17:28:58.904Z",
+        "updated_at": "2025-12-08T17:28:58.904Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "17499.65",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 5,
+        "name": "USB-C Cable 2m",
+        "sku": "CABLE-USB-001",
+        "description": "High-speed USB-C cable",
+        "supplier_id": 3,
+        "unit_price": "19.99",
+        "stock_quantity": 400,
+        "reorder_level": 100,
+        "created_at": "2025-12-08T17:28:58.904Z",
+        "updated_at": "2025-12-08T17:28:58.904Z",
+        "supplier_name": "Component Masters",
+        "total_value": "7996.00",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 3,
+        "name": "Mechanical Keyboard",
+        "sku": "KEYBOARD-001",
+        "description": "RGB mechanical keyboard",
+        "supplier_id": 2,
+        "unit_price": "89.99",
+        "stock_quantity": 60,
+        "reorder_level": 15,
+        "created_at": "2025-12-08T17:28:58.904Z",
+        "updated_at": "2025-12-08T17:28:58.904Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "5399.40",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 2,
+        "name": "Wireless Mouse",
+        "sku": "MOUSE-001",
+        "description": "Ergonomic wireless mouse",
+        "supplier_id": 2,
+        "unit_price": "29.99",
+        "stock_quantity": 120,
+        "reorder_level": 30,
+        "created_at": "2025-12-08T17:28:58.904Z",
+        "updated_at": "2025-12-08T17:28:58.904Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "3598.80",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 8,
+        "name": "xyz",
+        "sku": "12",
+        "description": null,
+        "supplier_id": 3,
+        "unit_price": "12.00",
+        "stock_quantity": 40,
+        "reorder_level": 10,
+        "created_at": "2025-12-09T09:34:33.214Z",
+        "updated_at": "2025-12-09T09:34:33.214Z",
+        "supplier_name": "Component Masters",
+        "total_value": "480.00",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 9,
+        "name": "aamir",
+        "sku": "12345",
+        "description": null,
+        "supplier_id": 2,
+        "unit_price": "12.00",
+        "stock_quantity": 12,
+        "reorder_level": 10,
+        "created_at": "2025-12-26T07:16:47.415Z",
+        "updated_at": "2025-12-26T07:16:47.415Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "144.00",
+        "stock_status": "NORMAL"
+      },
+      {
+        "id": 6,
+        "name": "anish",
+        "sku": "1",
+        "description": null,
+        "supplier_id": 2,
+        "unit_price": "10.00",
+        "stock_quantity": 9,
+        "reorder_level": 1,
+        "created_at": "2025-12-08T17:29:24.825Z",
+        "updated_at": "2025-12-09T09:22:06.240Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "90.00",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 1,
+        "name": "Business Laptop Pro",
+        "sku": "LAPTOP-001",
+        "description": "High-performance laptop",
+        "supplier_id": 1,
+        "unit_price": "1299.99",
+        "stock_quantity": 0,
+        "reorder_level": 5,
+        "created_at": "2025-12-08T17:28:58.904Z",
+        "updated_at": "2025-12-09T09:25:03.040Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "0.00",
+        "stock_status": "OUT_OF_STOCK"
+      }
+    ],
+    "inventorySummary": [
+      {
+        "total_products": "8",
+        "total_inventory_value": "35207.85",
+        "average_price": "246.7437500000000000",
+        "total_units": "676",
+        "out_of_stock_count": "1",
+        "low_stock_count": "1",
+        "overstock_count": "6"
+      }
+    ],
+    "ordersInPeriod": [],
+    "topSellingProducts": [],
+    "supplierPerformance": [
+      {
+        "name": "TechParts Inc",
+        "contact_email": "contact@techparts.com",
+        "product_count": "2",
+        "total_value": "17499.65",
+        "low_stock_products": "1",
+        "avg_product_price": "899.9900000000000000"
+      },
+      {
+        "name": "Global Electronics",
+        "contact_email": "hello@globalelec.com",
+        "product_count": "4",
+        "total_value": "9232.20",
+        "low_stock_products": "0",
+        "avg_product_price": "35.4950000000000000"
+      },
+      {
+        "name": "Component Masters",
+        "contact_email": "sales@compmasters.com",
+        "product_count": "2",
+        "total_value": "8476.00",
+        "low_stock_products": "0",
+        "avg_product_price": "15.9950000000000000"
+      }
+    ],
+    "stockAlerts": [
+      {
+        "name": "Business Laptop Pro",
+        "sku": "LAPTOP-001",
+        "stock_quantity": 0,
+        "reorder_level": 5,
+        "supplier_name": "TechParts Inc",
+        "contact_email": "contact@techparts.com",
+        "units_needed": 5,
+        "reorder_cost": "6499.95"
+      }
+    ]
+  }
+}

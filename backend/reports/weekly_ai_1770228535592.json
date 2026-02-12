@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1770228535592",
+    "type": "weekly",
+    "period": "2026-01-28 to 2026-02-04",
+    "generatedAt": "2026-02-04T18:08:55.592Z",
+    "userId": 1,
+    "aiStatus": {
+      "keyUsed": "primary",
+      "usingFallback": false,
+      "primaryFailures": 0
+    },
+    "dataSnapshot": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "ordersInPeriod": 0,
+      "criticalAlerts": 0,
+      "stockHealth": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0,
+        "normalPercent": 0,
+        "lowStockPercent": 0,
+        "outOfStockPercent": 0,
+        "overstockPercent": 0
+      },
+      "financialMetrics": {
+        "turnoverRisk": "Low",
+        "capitalTiedUp": 0,
+        "reorderInvestment": 0
+      },
+      "topPerformers": [],
+      "criticalItems": 0
+    },
+    "optimizations": {
+      "promptTokensUsed": 1189,
+      "analysisDepth": 7,
+      "cacheUsed": false,
+      "generationTime": 11792
+    }
+  },
+  "content": "**Weekly Inventory Report: 2026-01-28 to 2026-02-04**\n\n**To:** Management Team\n**From:** [Your Name/Inventory Analyst Department]\n**Date:** 2026-02-04\n**Subject:** Critical Review of Inventory Status and Operational Readiness\n\n**1. Executive Summary: Inventory Health & Key Concerns**\n\nThis week's inventory report presents a highly unusual and critical situation: we currently hold **zero products** across all categories, resulting in a total inventory value of $0. Consequently, no sales or orders were recorded during this period.\n\nThe primary and overarching concern is the complete absence of any physical inventory. This indicates a fundamental halt in our ability to fulfill orders, generate revenue, or engage in any product-based business activity. While technically we have no overstocked or understocked items, this is due to the lack of any stock whatsoever, not efficient management.\n\n**2. Most Important Issues Needing Immediate Attention**\n\nThe most critical issue is the **absolute lack of inventory**. Without products, the business cannot operate. This situation demands immediate investigation into its root cause:\n*   Is this a new business yet to acquire initial stock?\n*   Has there been a complete cessation of product operations?\n*   Is there a significant data reporting error?\n\nUntil this fundamental issue is resolved, all other inventory",
+  "rawData": {
+    "currentInventory": [],
+    "inventorySummary": [
+      {
+        "total_products": "0",
+        "total_inventory_value": null,
+        "average_price": null,
+        "total_units": null,
+        "out_of_stock_count": "0",
+        "low_stock_count": "0",
+        "overstock_count": "0"
+      }
+    ],
+    "ordersInPeriod": [],
+    "topSellingProducts": [],
+    "supplierPerformance": [],
+    "stockAlerts": []
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "avgPrice": 0
+    },
+    "stockStatus": {
+      "normal": 0,
+      "lowStock": 0,
+      "outOfStock": 0,
+      "overstock": 0,
+      "normalPercent": 0,
+      "lowStockPercent": 0,
+      "outOfStockPercent": 0,
+      "overstockPercent": 0
+    },
+    "topProducts": [],
+    "criticalAlerts": [],
+    "topSuppliers": [],
+    "periodActivity": {
+      "totalOrders": 0,
+      "totalOrderValue": 0,
+      "topSelling": "None"
+    },
+    "financial": {
+      "turnoverRisk": "Low",
+      "capitalTiedUp": 0,
+      "reorderInvestment": 0
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1770552198735",
+    "type": "weekly",
+    "period": "2026-02-01 to 2026-02-08",
+    "generatedAt": "2026-02-08T12:03:18.735Z",
+    "userId": 1,
+    "aiStatus": {
+      "keyUsed": "primary",
+      "usingFallback": false,
+      "primaryFailures": 0
+    },
+    "dataSnapshot": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "ordersInPeriod": 0,
+      "criticalAlerts": 0,
+      "stockHealth": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 0,
+        "lowStock": 0,
+        "outOfStock": 0,
+        "overstock": 0,
+        "normalPercent": 0,
+        "lowStockPercent": 0,
+        "outOfStockPercent": 0,
+        "overstockPercent": 0
+      },
+      "financialMetrics": {
+        "turnoverRisk": "Low",
+        "capitalTiedUp": 0,
+        "reorderInvestment": 0
+      },
+      "topPerformers": [],
+      "criticalItems": 0
+    },
+    "optimizations": {
+      "promptTokensUsed": 1189,
+      "analysisDepth": 7,
+      "cacheUsed": false,
+      "generationTime": 11682
+    }
+  },
+  "content": "**Subject: Weekly Inventory Report: 2026-02-01 to 2026-02-08 - Critical Operational Status**\n\nDear Team,\n\nThis weekly inventory report covers the period from February 1st to February 8th, 2026. The data for this period presents a unique and critical situation that requires immediate attention.\n\n**Overall Inventory Health & Key Concerns**\nOur inventory system currently reflects **zero products, zero units, and zero total value**. Consequently, there have been no orders or sales recorded for this period. This indicates a complete absence of stock, which is the primary and most urgent concern for the business. Without any inventory, our ability to generate revenue is non-existent.\n\n**Immediate Issues & Stock Distribution**\nThe most pressing issue is the **complete lack of product availability**. The stock status breakdown confirms this, showing 0% in all categories (overstocked, running low, out of stock, optimal). This isn't merely a low stock situation; it signifies a fundamental operational halt from an inventory perspective. This distribution means we have no assets to sell, no customer orders to fulfill, and therefore, no business activity to analyze in terms of product movement.\n\n**Financial Implications & Cash Flow Impact**\nOn the surface, having no inventory means **$0 tied up in excess stock**, and no immediate capital needed for urgent reorders. However, the critical implication is the **complete absence of revenue generation**. While there's no capital at risk from holding inventory, there's also no capital being generated from sales. If the business is intended to be operational, this state represents a significant cash flow challenge, as there are no sales to offset operational costs. Any future business activity will require substantial initial investment for product acquisition.\n\n**Actionable Recommendations & Priorities**\n\nGiven this unprecedented situation, our recommendations are focused on understanding and rectifying the core issue:\n\n1.  **Priority 1: Data Verification & System Integrity (Immediate)**\n    *   **Action:** Confirm if this data accurately reflects the current business state. Is this a pre-launch phase, a temporary operational pause, or a critical data entry/system error?\n    *   **Owner:** Inventory Management / IT Support\n    *   **Timeline:** Within 24 hours.\n\n2.  **Priority 2: Strategic Review & Product Sourcing (If Data is Accurate)**\n    *   **Action:** If the zero inventory is an accurate reflection of a pre-launch or intentional pause, we must immediately initiate or review our product sourcing strategy. This includes identifying key products, suppliers, lead times, and initial order quantities.\n    *   **Owner:** Procurement / Sales & Marketing\n    *   **Timeline:** Ongoing, starting immediately upon data verification.\n\n3.  **Priority 3: Root Cause Analysis (If Data is Inaccurate)**\n    *   **Action:** If the business *should* have inventory and sales, a thorough investigation into the inventory management system, data input processes, and any potential system failures is paramount.\n    *   **Owner:** IT Support / Operations\n    *   **Timeline:** Immediately upon confirming data inaccuracy.\n\nThis report highlights a critical juncture for our operations. Addressing the root cause of the zero inventory status is our absolute top priority to enable any future business activity and revenue generation.\n\nBest regards,\n\n[Your Name/Inventory Analyst Team]",
+  "rawData": {
+    "currentInventory": [],
+    "inventorySummary": [
+      {
+        "total_products": "0",
+        "total_inventory_value": null,
+        "average_price": null,
+        "total_units": null,
+        "out_of_stock_count": "0",
+        "low_stock_count": "0",
+        "overstock_count": "0"
+      }
+    ],
+    "ordersInPeriod": [],
+    "topSellingProducts": [],
+    "supplierPerformance": [
+      {
+        "name": "Workflow Test Supplier",
+        "contact_email": null,
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "stockAlerts": []
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 0,
+      "totalValue": 0,
+      "totalUnits": 0,
+      "avgPrice": 0
+    },
+    "stockStatus": {
+      "normal": 0,
+      "lowStock": 0,
+      "outOfStock": 0,
+      "overstock": 0,
+      "normalPercent": 0,
+      "lowStockPercent": 0,
+      "outOfStockPercent": 0,
+      "overstockPercent": 0
+    },
+    "topProducts": [],
+    "criticalAlerts": [],
+    "topSuppliers": [
+      {
+        "name": "Workflow Test Supplier",
+        "contact_email": null,
+        "product_count": "0",
+        "total_value": null,
+        "low_stock_products": "0",
+        "avg_product_price": null
+      }
+    ],
+    "periodActivity": {
+      "totalOrders": 0,
+      "totalOrderValue": 0,
+      "topSelling": "None"
+    },
+    "financial": {
+      "turnoverRisk": "Low",
+      "capitalTiedUp": 0,
+      "reorderInvestment": 0
+    }
+  }
+}

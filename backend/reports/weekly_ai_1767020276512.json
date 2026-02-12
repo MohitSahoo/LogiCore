@@ -1,0 +1,691 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1767020276512",
+    "type": "weekly",
+    "period": "2025-12-22T14:57:44.339Z to 2025-12-29T14:57:44.339Z",
+    "generatedAt": "2025-12-29T14:57:56.512Z",
+    "dataSnapshot": {
+      "totalProducts": 16,
+      "totalValue": 125068.83,
+      "totalUnits": 1117,
+      "ordersInPeriod": 2,
+      "criticalAlerts": 2,
+      "stockHealth": {
+        "normal": 1,
+        "lowStock": 2,
+        "outOfStock": 0,
+        "overstock": 13
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 1,
+        "lowStock": 2,
+        "outOfStock": 0,
+        "overstock": 13,
+        "normalPercent": 6,
+        "lowStockPercent": 13,
+        "outOfStockPercent": 0,
+        "overstockPercent": 81
+      },
+      "financialMetrics": {
+        "turnoverRisk": "High",
+        "capitalTiedUp": 112719.06,
+        "reorderInvestment": 2599.8
+      },
+      "topPerformers": [
+        {
+          "id": 1,
+          "name": "Business Laptop Pro",
+          "sku": "LAPTOP-001",
+          "description": "High-performance laptop",
+          "supplier_id": 1,
+          "unit_price": "1299.99",
+          "stock_quantity": 25,
+          "reorder_level": 5,
+          "created_at": "2025-12-29T14:24:10.164Z",
+          "updated_at": "2025-12-29T14:24:10.164Z",
+          "supplier_name": "TechParts Inc",
+          "total_value": "32499.75",
+          "stock_status": "OVERSTOCK"
+        },
+        {
+          "id": 4,
+          "name": "27\" 4K Monitor",
+          "sku": "MONITOR-001",
+          "description": "Professional 4K display",
+          "supplier_id": 1,
+          "unit_price": "499.99",
+          "stock_quantity": 35,
+          "reorder_level": 10,
+          "created_at": "2025-12-29T14:24:10.164Z",
+          "updated_at": "2025-12-29T14:24:10.164Z",
+          "supplier_name": "TechParts Inc",
+          "total_value": "17499.65",
+          "stock_status": "OVERSTOCK"
+        },
+        {
+          "id": 7,
+          "name": "Tablet 10\" Pro",
+          "sku": "TABLET-001",
+          "description": "Professional tablet with stylus",
+          "supplier_id": 5,
+          "unit_price": "649.99",
+          "stock_quantity": 18,
+          "reorder_level": 8,
+          "created_at": "2025-12-29T14:24:10.164Z",
+          "updated_at": "2025-12-29T14:24:10.164Z",
+          "supplier_name": "Hardware Express",
+          "total_value": "11699.82",
+          "stock_status": "NORMAL"
+        }
+      ],
+      "criticalItems": 2
+    },
+    "optimizations": {
+      "promptTokensUsed": 1782,
+      "analysisDepth": 7,
+      "cacheUsed": true,
+      "generationTime": 12006
+    }
+  },
+  "content": "## Weekly Inventory Analysis Report\n\n**Reporting Period:** 2025-12-22 to 2025-12-29\n**Date Generated:** 2025-12-29\n\n### 1. Executive Summary\n\nThis weekly inventory analysis reveals a mixed but concerning inventory health. While no products are currently out of stock, ",
+  "rawData": {
+    "currentInventory": [
+      {
+        "id": 1,
+        "name": "Business Laptop Pro",
+        "sku": "LAPTOP-001",
+        "description": "High-performance laptop",
+        "supplier_id": 1,
+        "unit_price": "1299.99",
+        "stock_quantity": 25,
+        "reorder_level": 5,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "32499.75",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 4,
+        "name": "27\" 4K Monitor",
+        "sku": "MONITOR-001",
+        "description": "Professional 4K display",
+        "supplier_id": 1,
+        "unit_price": "499.99",
+        "stock_quantity": 35,
+        "reorder_level": 10,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "17499.65",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 7,
+        "name": "Tablet 10\" Pro",
+        "sku": "TABLET-001",
+        "description": "Professional tablet with stylus",
+        "supplier_id": 5,
+        "unit_price": "649.99",
+        "stock_quantity": 18,
+        "reorder_level": 8,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Hardware Express",
+        "total_value": "11699.82",
+        "stock_status": "NORMAL"
+      },
+      {
+        "id": 6,
+        "name": "Wireless Headphones",
+        "sku": "HEADPHONES-001",
+        "description": "Noise-cancelling wireless headphones",
+        "supplier_id": 4,
+        "unit_price": "199.99",
+        "stock_quantity": 45,
+        "reorder_level": 12,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Digital Solutions Ltd",
+        "total_value": "8999.55",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 5,
+        "name": "USB-C Cable 2m",
+        "sku": "CABLE-USB-001",
+        "description": "High-speed USB-C cable",
+        "supplier_id": 3,
+        "unit_price": "19.99",
+        "stock_quantity": 400,
+        "reorder_level": 100,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Component Masters",
+        "total_value": "7996.00",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 9,
+        "name": "External SSD 1TB",
+        "sku": "SSD-001",
+        "description": "Portable external SSD drive",
+        "supplier_id": 7,
+        "unit_price": "129.99",
+        "stock_quantity": 55,
+        "reorder_level": 15,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Innovative Components",
+        "total_value": "7149.45",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 8,
+        "name": "Webcam HD Pro",
+        "sku": "WEBCAM-001",
+        "description": "1080p HD webcam with auto-focus",
+        "supplier_id": 6,
+        "unit_price": "79.99",
+        "stock_quantity": 85,
+        "reorder_level": 20,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Premium Tech Supply",
+        "total_value": "6799.15",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 14,
+        "name": "Security Camera",
+        "sku": "CAMERA-001",
+        "description": "IP security camera with night vision",
+        "supplier_id": 12,
+        "unit_price": "149.99",
+        "stock_quantity": 42,
+        "reorder_level": 12,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Professional Equipment Co",
+        "total_value": "6299.58",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 3,
+        "name": "Mechanical Keyboard",
+        "sku": "KEYBOARD-001",
+        "description": "RGB mechanical keyboard",
+        "supplier_id": 2,
+        "unit_price": "89.99",
+        "stock_quantity": 60,
+        "reorder_level": 15,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "5399.40",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 10,
+        "name": "Docking Station",
+        "sku": "DOCK-001",
+        "description": "Universal USB-C docking station",
+        "supplier_id": 8,
+        "unit_price": "159.99",
+        "stock_quantity": 32,
+        "reorder_level": 10,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Reliable Electronics Co",
+        "total_value": "5119.68",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 12,
+        "name": "Bluetooth Speaker",
+        "sku": "SPEAKER-001",
+        "description": "Portable Bluetooth speaker",
+        "supplier_id": 10,
+        "unit_price": "69.99",
+        "stock_quantity": 72,
+        "reorder_level": 18,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Quality Parts Direct",
+        "total_value": "5039.28",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 11,
+        "name": "Wireless Charger",
+        "sku": "CHARGER-001",
+        "description": "Fast wireless charging pad",
+        "supplier_id": 9,
+        "unit_price": "39.99",
+        "stock_quantity": 95,
+        "reorder_level": 25,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Advanced Systems Inc",
+        "total_value": "3799.05",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 2,
+        "name": "Wireless Mouse",
+        "sku": "MOUSE-001",
+        "description": "Ergonomic wireless mouse",
+        "supplier_id": 2,
+        "unit_price": "29.99",
+        "stock_quantity": 120,
+        "reorder_level": 30,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Global Electronics",
+        "total_value": "3598.80",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 13,
+        "name": "Network Switch 8-Port",
+        "sku": "SWITCH-001",
+        "description": "Gigabit Ethernet switch",
+        "supplier_id": 11,
+        "unit_price": "89.99",
+        "stock_quantity": 28,
+        "reorder_level": 8,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Smart Tech Distributors",
+        "total_value": "2519.72",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 16,
+        "name": "Smart Watch",
+        "sku": "WATCH-001",
+        "description": "Fitness tracking smart watch",
+        "supplier_id": 9,
+        "unit_price": "249.99",
+        "stock_quantity": 2,
+        "reorder_level": 10,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Advanced Systems Inc",
+        "total_value": "499.98",
+        "stock_status": "LOW_STOCK"
+      },
+      {
+        "id": 15,
+        "name": "Power Bank 20000mAh",
+        "sku": "POWERBANK-001",
+        "description": "High-capacity portable power bank",
+        "supplier_id": 5,
+        "unit_price": "49.99",
+        "stock_quantity": 3,
+        "reorder_level": 15,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Hardware Express",
+        "total_value": "149.97",
+        "stock_status": "LOW_STOCK"
+      }
+    ],
+    "inventorySummary": [
+      {
+        "total_products": "16",
+        "total_inventory_value": "125068.83",
+        "average_price": "238.1150000000000000",
+        "total_units": "1117",
+        "out_of_stock_count": "0",
+        "low_stock_count": "2",
+        "overstock_count": "13"
+      }
+    ],
+    "ordersInPeriod": [
+      {
+        "id": 1,
+        "order_number": "PO-2025-001",
+        "customer_name": "Acme Corp",
+        "status": "PENDING",
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "item_count": "2",
+        "total_amount": "5799.56",
+        "order_date": "2025-12-28T18:30:00.000Z"
+      },
+      {
+        "id": 2,
+        "order_number": "PO-2025-002",
+        "customer_name": "Globex",
+        "status": "COMPLETED",
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "item_count": "2",
+        "total_amount": "4498.74",
+        "order_date": "2025-12-28T18:30:00.000Z"
+      }
+    ],
+    "topSellingProducts": [
+      {
+        "name": "USB-C Cable 2m",
+        "sku": "CABLE-USB-001",
+        "total_sold": "120",
+        "total_revenue": "1798.80",
+        "order_count": "1"
+      },
+      {
+        "name": "Wireless Mouse",
+        "sku": "MOUSE-001",
+        "total_sold": "40",
+        "total_revenue": "999.60",
+        "order_count": "1"
+      },
+      {
+        "name": "27\" 4K Monitor",
+        "sku": "MONITOR-001",
+        "total_sold": "6",
+        "total_revenue": "2699.94",
+        "order_count": "1"
+      },
+      {
+        "name": "Business Laptop Pro",
+        "sku": "LAPTOP-001",
+        "total_sold": "4",
+        "total_revenue": "4799.96",
+        "order_count": "1"
+      }
+    ],
+    "supplierPerformance": [
+      {
+        "name": "TechParts Inc",
+        "contact_email": "contact@techparts.com",
+        "product_count": "2",
+        "total_value": "49999.40",
+        "low_stock_products": "0",
+        "avg_product_price": "899.9900000000000000"
+      },
+      {
+        "name": "Hardware Express",
+        "contact_email": "support@hardwareexpress.com",
+        "product_count": "2",
+        "total_value": "11849.79",
+        "low_stock_products": "1",
+        "avg_product_price": "349.9900000000000000"
+      },
+      {
+        "name": "Digital Solutions Ltd",
+        "contact_email": "orders@digitalsolutions.com",
+        "product_count": "1",
+        "total_value": "8999.55",
+        "low_stock_products": "0",
+        "avg_product_price": "199.9900000000000000"
+      },
+      {
+        "name": "Global Electronics",
+        "contact_email": "hello@globalelec.com",
+        "product_count": "2",
+        "total_value": "8998.20",
+        "low_stock_products": "0",
+        "avg_product_price": "59.9900000000000000"
+      },
+      {
+        "name": "Component Masters",
+        "contact_email": "sales@compmasters.com",
+        "product_count": "1",
+        "total_value": "7996.00",
+        "low_stock_products": "0",
+        "avg_product_price": "19.9900000000000000"
+      },
+      {
+        "name": "Innovative Components",
+        "contact_email": "info@innovativecomp.com",
+        "product_count": "1",
+        "total_value": "7149.45",
+        "low_stock_products": "0",
+        "avg_product_price": "129.9900000000000000"
+      },
+      {
+        "name": "Premium Tech Supply",
+        "contact_email": "sales@premiumtech.com",
+        "product_count": "1",
+        "total_value": "6799.15",
+        "low_stock_products": "0",
+        "avg_product_price": "79.9900000000000000"
+      },
+      {
+        "name": "Professional Equipment Co",
+        "contact_email": "business@proequipment.com",
+        "product_count": "1",
+        "total_value": "6299.58",
+        "low_stock_products": "0",
+        "avg_product_price": "149.9900000000000000"
+      },
+      {
+        "name": "Reliable Electronics Co",
+        "contact_email": "contact@reliableelec.com",
+        "product_count": "1",
+        "total_value": "5119.68",
+        "low_stock_products": "0",
+        "avg_product_price": "159.9900000000000000"
+      },
+      {
+        "name": "Quality Parts Direct",
+        "contact_email": "orders@qualityparts.com",
+        "product_count": "1",
+        "total_value": "5039.28",
+        "low_stock_products": "0",
+        "avg_product_price": "69.9900000000000000"
+      },
+      {
+        "name": "Advanced Systems Inc",
+        "contact_email": "procurement@advancedsys.com",
+        "product_count": "2",
+        "total_value": "4299.03",
+        "low_stock_products": "1",
+        "avg_product_price": "144.9900000000000000"
+      },
+      {
+        "name": "Smart Tech Distributors",
+        "contact_email": "sales@smarttechdist.com",
+        "product_count": "1",
+        "total_value": "2519.72",
+        "low_stock_products": "0",
+        "avg_product_price": "89.9900000000000000"
+      }
+    ],
+    "stockAlerts": [
+      {
+        "name": "Power Bank 20000mAh",
+        "sku": "POWERBANK-001",
+        "stock_quantity": 3,
+        "reorder_level": 15,
+        "supplier_name": "Hardware Express",
+        "contact_email": "support@hardwareexpress.com",
+        "units_needed": 12,
+        "reorder_cost": "599.88"
+      },
+      {
+        "name": "Smart Watch",
+        "sku": "WATCH-001",
+        "stock_quantity": 2,
+        "reorder_level": 10,
+        "supplier_name": "Advanced Systems Inc",
+        "contact_email": "procurement@advancedsys.com",
+        "units_needed": 8,
+        "reorder_cost": "1999.92"
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 16,
+      "totalValue": 125068.83,
+      "totalUnits": 1117,
+      "avgPrice": 111.97
+    },
+    "stockStatus": {
+      "normal": 1,
+      "lowStock": 2,
+      "outOfStock": 0,
+      "overstock": 13,
+      "normalPercent": 6,
+      "lowStockPercent": 13,
+      "outOfStockPercent": 0,
+      "overstockPercent": 81
+    },
+    "topProducts": [
+      {
+        "id": 1,
+        "name": "Business Laptop Pro",
+        "sku": "LAPTOP-001",
+        "description": "High-performance laptop",
+        "supplier_id": 1,
+        "unit_price": "1299.99",
+        "stock_quantity": 25,
+        "reorder_level": 5,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "32499.75",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 4,
+        "name": "27\" 4K Monitor",
+        "sku": "MONITOR-001",
+        "description": "Professional 4K display",
+        "supplier_id": 1,
+        "unit_price": "499.99",
+        "stock_quantity": 35,
+        "reorder_level": 10,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "TechParts Inc",
+        "total_value": "17499.65",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 7,
+        "name": "Tablet 10\" Pro",
+        "sku": "TABLET-001",
+        "description": "Professional tablet with stylus",
+        "supplier_id": 5,
+        "unit_price": "649.99",
+        "stock_quantity": 18,
+        "reorder_level": 8,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Hardware Express",
+        "total_value": "11699.82",
+        "stock_status": "NORMAL"
+      },
+      {
+        "id": 6,
+        "name": "Wireless Headphones",
+        "sku": "HEADPHONES-001",
+        "description": "Noise-cancelling wireless headphones",
+        "supplier_id": 4,
+        "unit_price": "199.99",
+        "stock_quantity": 45,
+        "reorder_level": 12,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Digital Solutions Ltd",
+        "total_value": "8999.55",
+        "stock_status": "OVERSTOCK"
+      },
+      {
+        "id": 5,
+        "name": "USB-C Cable 2m",
+        "sku": "CABLE-USB-001",
+        "description": "High-speed USB-C cable",
+        "supplier_id": 3,
+        "unit_price": "19.99",
+        "stock_quantity": 400,
+        "reorder_level": 100,
+        "created_at": "2025-12-29T14:24:10.164Z",
+        "updated_at": "2025-12-29T14:24:10.164Z",
+        "supplier_name": "Component Masters",
+        "total_value": "7996.00",
+        "stock_status": "OVERSTOCK"
+      }
+    ],
+    "criticalAlerts": [
+      {
+        "name": "Power Bank 20000mAh",
+        "sku": "POWERBANK-001",
+        "stock_quantity": 3,
+        "reorder_level": 15,
+        "supplier_name": "Hardware Express",
+        "contact_email": "support@hardwareexpress.com",
+        "units_needed": 12,
+        "reorder_cost": "599.88"
+      },
+      {
+        "name": "Smart Watch",
+        "sku": "WATCH-001",
+        "stock_quantity": 2,
+        "reorder_level": 10,
+        "supplier_name": "Advanced Systems Inc",
+        "contact_email": "procurement@advancedsys.com",
+        "units_needed": 8,
+        "reorder_cost": "1999.92"
+      }
+    ],
+    "topSuppliers": [
+      {
+        "name": "TechParts Inc",
+        "contact_email": "contact@techparts.com",
+        "product_count": "2",
+        "total_value": "49999.40",
+        "low_stock_products": "0",
+        "avg_product_price": "899.9900000000000000"
+      },
+      {
+        "name": "Hardware Express",
+        "contact_email": "support@hardwareexpress.com",
+        "product_count": "2",
+        "total_value": "11849.79",
+        "low_stock_products": "1",
+        "avg_product_price": "349.9900000000000000"
+      },
+      {
+        "name": "Digital Solutions Ltd",
+        "contact_email": "orders@digitalsolutions.com",
+        "product_count": "1",
+        "total_value": "8999.55",
+        "low_stock_products": "0",
+        "avg_product_price": "199.9900000000000000"
+      },
+      {
+        "name": "Global Electronics",
+        "contact_email": "hello@globalelec.com",
+        "product_count": "2",
+        "total_value": "8998.20",
+        "low_stock_products": "0",
+        "avg_product_price": "59.9900000000000000"
+      },
+      {
+        "name": "Component Masters",
+        "contact_email": "sales@compmasters.com",
+        "product_count": "1",
+        "total_value": "7996.00",
+        "low_stock_products": "0",
+        "avg_product_price": "19.9900000000000000"
+      }
+    ],
+    "periodActivity": {
+      "totalOrders": 2,
+      "totalOrderValue": 10298.3,
+      "topSelling": "USB-C Cable 2m"
+    },
+    "financial": {
+      "turnoverRisk": "High",
+      "capitalTiedUp": 112719.06,
+      "reorderInvestment": 2599.8
+    }
+  }
+}
