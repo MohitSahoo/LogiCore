@@ -14,8 +14,8 @@ A full-stack inventory and supply chain management system with AI-powered insigh
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd "FINAL PROJECT -DBMS 2"
+git clone https://github.com/MohitSahoo/LogiCore
+cd "LogiCore"
 ```
 
 2. **Setup Backend**
