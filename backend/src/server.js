@@ -9,11 +9,10 @@ import reportsRouter from './routes/reports.js';
 import authRouter from './routes/auth.js';
 import aiReportsRouter from './routes/aiReports.js';
 import adminRouter from './routes/admin.js';
+import healthRouter from './routes/health.js';
 
 import { pool } from './db.js';
 import { connectMongoDB } from './mongodb.js';
-
-
 
 dotenv.config();
 
@@ -26,7 +25,14 @@ connectMongoDB().catch((err) => {
   console.error('⚠️  MongoDB connection failed, continuing without MongoDB features');
 });
 
-app.use(cors());
+// CORS Configuration
+const corsOptions = {
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('dev'));
 
@@ -50,6 +56,9 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.json({ message: 'LogiCore API is running' });
 });
+
+// Health check endpoint
+app.use('/health', healthRouter);
 
 app.use('/api/products', productsRouter);
 app.use('/api/suppliers', suppliersRouter);

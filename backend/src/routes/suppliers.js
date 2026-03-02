@@ -2,6 +2,8 @@
 import express from 'express';
 import { pool } from '../db.js';
 import { authenticateToken, optionalAuth } from '../middleware/auth.js';
+import { validate } from '../middleware/validate.js';
+import { createSupplierSchema, updateSupplierSchema } from '../validation/schemas.js';
 
 const router = express.Router();
 
@@ -60,7 +62,7 @@ router.get('/:id', async (req, res, next) => {
 });
 
 // POST /api/suppliers - create new supplier
-router.post('/', authenticateToken, async (req, res, next) => {
+router.post('/', authenticateToken, validate(createSupplierSchema), async (req, res, next) => {
   const client = await pool.connect();
   
   try {
@@ -130,7 +132,7 @@ router.post('/', authenticateToken, async (req, res, next) => {
 });
 
 // PUT /api/suppliers/:id - update supplier
-router.put('/:id', authenticateToken, async (req, res, next) => {
+router.put('/:id', authenticateToken, validate(updateSupplierSchema), async (req, res, next) => {
   const client = await pool.connect();
   
   try {

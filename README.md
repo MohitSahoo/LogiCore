@@ -306,11 +306,27 @@ psql -U username -d smart_supply_chain -c "\dt"
 
 ---
 
+## 🚀 Deployment
+
+Ready to deploy to production? Deploy for FREE!
+
+**🆓 FREE Forever Deployment:**
+See [DEPLOY_FREE.md](./DEPLOY_FREE.md) for complete step-by-step guide (20 minutes)
+
+**What you get:**
+- ✅ Live website with HTTPS
+- ✅ PostgreSQL database (1GB)
+- ✅ MongoDB database (512MB)
+- ✅ Auto-deploy on git push
+- ✅ $0/month forever
+
+**Platform:** Render + MongoDB Atlas (both free tier)
+
+---
+
 ## 📚 Additional Documentation
 
-- **[PROJECT_DESCRIPTION.md](./PROJECT_DESCRIPTION.md)** - Comprehensive project documentation
-- **[API_KEY_ARCHITECTURE.md](./API_KEY_ARCHITECTURE.md)** - AI integration details
-- **[GEMINI_PROMPTS_LOCATION.md](./GEMINI_PROMPTS_LOCATION.md)** - AI prompt documentation
+- **[DEPLOY_FREE.md](./DEPLOY_FREE.md)** - Complete FREE deployment guide
 
 ---
 
@@ -344,4 +360,4 @@ This project is for educational purposes.
 
 ---
 
-**Need help?** Check [PROJECT_DESCRIPTION.md](./PROJECT_DESCRIPTION.md) for detailed documentation.
+**Need help?** Check [DEPLOY_FREE.md](./DEPLOY_FREE.md) for deployment instructions.

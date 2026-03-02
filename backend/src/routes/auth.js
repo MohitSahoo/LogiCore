@@ -2,11 +2,14 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { pool } from '../db.js';
+import { validate } from '../middleware/validate.js';
+import { registerSchema, loginSchema } from '../validation/schemas.js';
 
 const router = express.Router();
 
 // JWT Secret (in production, use environment variable)
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 
 // Middleware to verify JWT token
 export const authenticateToken = (req, res, next) => {
@@ -27,22 +30,9 @@ export const authenticateToken = (req, res, next) => {
 };
 
 // Register new user
-router.post('/register', async (req, res) => {
+router.post('/register', validate(registerSchema), async (req, res) => {
   try {
     const { email, password, firstName, lastName } = req.body;
-
-    // Validate input
-    if (!email || !password || !firstName || !lastName) {
-      return res.status(400).json({ 
-        error: 'All fields are required: email, password, firstName, lastName' 
-      });
-    }
-
-    if (password.length < 6) {
-      return res.status(400).json({ 
-        error: 'Password must be at least 6 characters long' 
-      });
-    }
 
     // Check if user already exists
     const existingUser = await pool.query(
@@ -76,7 +66,7 @@ router.post('/register', async (req, res) => {
         role: user.role 
       },
       JWT_SECRET,
-      { expiresIn: '24h' }
+      { expiresIn: JWT_EXPIRES_IN }
     );
 
     res.status(201).json({
@@ -99,14 +89,9 @@ router.post('/register', async (req, res) => {
 });
 
 // Login user
-router.post('/login', async (req, res) => {
+router.post('/login', validate(loginSchema), async (req, res) => {
   try {
     const { email, password } = req.body;
-
-    // Validate input
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required' });
-    }
 
     // Find user
     const result = await pool.query(
@@ -145,7 +130,7 @@ router.post('/login', async (req, res) => {
         role: user.role 
       },
       JWT_SECRET,
-      { expiresIn: '24h' }
+      { expiresIn: JWT_EXPIRES_IN }
     );
 
     res.json({

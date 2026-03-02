@@ -2,6 +2,8 @@ import express from 'express';
 import { pool } from '../db.js';
 import { logActivity } from '../dal/activityLogger.js';
 import { authenticateToken, optionalAuth } from '../middleware/auth.js';
+import { validate } from '../middleware/validate.js';
+import { createProductSchema, updateProductSchema } from '../validation/schemas.js';
 
 const router = express.Router();
 
@@ -72,7 +74,7 @@ router.get('/:id', optionalAuth, async (req, res, next) => {
 });
 
 // POST /api/products
-router.post('/', authenticateToken, async (req, res, next) => {
+router.post('/', authenticateToken, validate(createProductSchema), async (req, res, next) => {
   const client = await pool.connect();
   
   try {
@@ -117,7 +119,7 @@ router.post('/', authenticateToken, async (req, res, next) => {
 });
 
 // PUT /api/products/:id
-router.put('/:id', authenticateToken, async (req, res, next) => {
+router.put('/:id', authenticateToken, validate(updateProductSchema), async (req, res, next) => {
   const client = await pool.connect();
   
   try {

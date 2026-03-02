@@ -434,9 +434,23 @@ Keep it under 500 words, focus on insights that help make business decisions, an
     };
   }
 
-  // Save report to file system
+  // Save report to MongoDB and file system
   async saveReport(report) {
     try {
+      // Save to MongoDB (primary storage)
+      try {
+        const { getDB } = await import('../mongodb.js');
+        const db = getDB();
+        const collection = db.collection('ai_reports');
+        
+        await collection.insertOne(report);
+        console.log(`✅ Report saved to MongoDB: ${report.metadata.id}`);
+      } catch (mongoError) {
+        console.error('⚠️  Failed to save to MongoDB:', mongoError.message);
+        // Continue to save to file system as fallback
+      }
+      
+      // Also save to file system as backup
       const reportsDir = path.join(process.cwd(), 'reports');
       if (!fs.existsSync(reportsDir)) {
         fs.mkdirSync(reportsDir, { recursive: true });
@@ -446,6 +460,7 @@ Keep it under 500 words, focus on insights that help make business decisions, an
       const filepath = path.join(reportsDir, filename);
       
       fs.writeFileSync(filepath, JSON.stringify(report, null, 2));
+      console.log(`✅ Report saved to file system: ${filename}`);
       
       return {
         success: true,
@@ -458,55 +473,93 @@ Keep it under 500 words, focus on insights that help make business decisions, an
     }
   }
 
-  // Get list of generated reports
+  // Get list of generated reports from MongoDB
   async getReportsList() {
     try {
-      const reportsDir = path.join(process.cwd(), 'reports');
-      if (!fs.existsSync(reportsDir)) {
-        return [];
-      }
+      const { getDB } = await import('../mongodb.js');
+      const db = getDB();
+      const collection = db.collection('ai_reports');
+      
+      const reports = await collection
+        .find({})
+        .sort({ 'metadata.generatedAt': -1 })
+        .toArray();
+      
+      // Transform MongoDB documents to match expected format
+      return reports.map(report => ({
+        filename: `${report.metadata.id}.json`,
+        metadata: report.metadata,
+        size: JSON.stringify(report).length // Approximate size
+      }));
+    } catch (error) {
+      console.error('Error getting reports list from MongoDB:', error);
+      
+      // Fallback to file system if MongoDB fails
+      try {
+        const reportsDir = path.join(process.cwd(), 'reports');
+        if (!fs.existsSync(reportsDir)) {
+          return [];
+        }
 
-      const files = fs.readdirSync(reportsDir);
-      const reports = [];
+        const files = fs.readdirSync(reportsDir);
+        const reports = [];
 
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          try {
-            const filepath = path.join(reportsDir, file);
-            const reportData = JSON.parse(fs.readFileSync(filepath, 'utf8'));
-            reports.push({
-              filename: file,
-              metadata: reportData.metadata,
-              size: fs.statSync(filepath).size
-            });
-          } catch (error) {
-            console.error(`Error reading report file ${file}:`, error);
+        for (const file of files) {
+          if (file.endsWith('.json')) {
+            try {
+              const filepath = path.join(reportsDir, file);
+              const reportData = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+              reports.push({
+                filename: file,
+                metadata: reportData.metadata,
+                size: fs.statSync(filepath).size
+              });
+            } catch (error) {
+              console.error(`Error reading report file ${file}:`, error);
+            }
           }
         }
-      }
 
-      return reports.sort((a, b) => new Date(b.metadata.generatedAt) - new Date(a.metadata.generatedAt));
-    } catch (error) {
-      console.error('Error getting reports list:', error);
-      throw error;
+        return reports.sort((a, b) => new Date(b.metadata.generatedAt) - new Date(a.metadata.generatedAt));
+      } catch (fsError) {
+        console.error('Error getting reports list from file system:', fsError);
+        return [];
+      }
     }
   }
 
-  // Load specific report
+  // Load specific report from MongoDB
   async loadReport(reportId) {
     try {
-      const reportsDir = path.join(process.cwd(), 'reports');
-      const filepath = path.join(reportsDir, `${reportId}.json`);
+      const { getDB } = await import('../mongodb.js');
+      const db = getDB();
+      const collection = db.collection('ai_reports');
       
-      if (!fs.existsSync(filepath)) {
+      const report = await collection.findOne({ 'metadata.id': reportId });
+      
+      if (!report) {
         throw new Error('Report not found');
       }
-
-      const reportData = JSON.parse(fs.readFileSync(filepath, 'utf8'));
-      return reportData;
+      
+      return report;
     } catch (error) {
-      console.error('Error loading report:', error);
-      throw error;
+      console.error('Error loading report from MongoDB:', error);
+      
+      // Fallback to file system if MongoDB fails
+      try {
+        const reportsDir = path.join(process.cwd(), 'reports');
+        const filepath = path.join(reportsDir, `${reportId}.json`);
+        
+        if (!fs.existsSync(filepath)) {
+          throw new Error('Report not found');
+        }
+
+        const reportData = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+        return reportData;
+      } catch (fsError) {
+        console.error('Error loading report from file system:', fsError);
+        throw new Error('Report not found');
+      }
     }
   }
 
