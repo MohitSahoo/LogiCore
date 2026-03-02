@@ -1,8 +1,6 @@
 import express from 'express';
 import aiReportService from '../services/aiReportService.js';
 import { authenticateToken } from '../middleware/auth.js';
-import { validate } from '../middleware/validate.js';
-import { generateReportSchema } from '../validation/schemas.js';
 
 const router = express.Router();
 
@@ -10,13 +8,27 @@ const router = express.Router();
 router.use(authenticateToken);
 
 // Generate a new report
-router.post('/generate', authenticateToken, validate(generateReportSchema), async (req, res) => {
+router.post('/generate', async (req, res) => {
   try {
     const { type, startDate, endDate } = req.body;
     // Admin users should see ALL data (pass null), regular users see only their own data
     const userId = req.user?.role === 'admin' ? null : req.user?.userId;
     
     console.log(`📊 Generating ${type} report for ${req.user?.role === 'admin' ? 'ALL USERS (admin view)' : `user ${userId}`}`);
+
+    if (!type || !startDate || !endDate) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required fields: type, startDate, endDate'
+      });
+    }
+
+    if (!['weekly', 'monthly'].includes(type)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Invalid report type. Must be "weekly" or "monthly"'
+      });
+    }
 
     const result = await aiReportService.generateReport(type, startDate, endDate, userId);
     
@@ -56,10 +68,9 @@ router.get('/list', async (req, res) => {
     const allReports = await aiReportService.getReportsList();
     
     // Filter reports to only show user's own reports (unless admin)
-    // Note: Old reports might not have userId, so we show them to all users for backward compatibility
     const reports = req.user?.role === 'admin' 
       ? allReports 
-      : allReports.filter(r => !r.metadata.userId || r.metadata.userId === userId);
+      : allReports.filter(r => r.metadata.userId === userId);
     
     res.json({
       success: true,
@@ -82,8 +93,7 @@ router.get('/:reportId', async (req, res) => {
     const report = await aiReportService.loadReport(reportId);
     
     // Check if user has access to this report (own report or admin)
-    // Note: Old reports might not have userId, so we allow access for backward compatibility
-    if (req.user?.role !== 'admin' && report.metadata.userId && report.metadata.userId !== userId) {
+    if (req.user?.role !== 'admin' && report.metadata.userId !== userId) {
       return res.status(403).json({
         success: false,
         error: 'Access denied: You can only view your own reports'
@@ -111,8 +121,7 @@ router.get('/:reportId/download', async (req, res) => {
     const report = await aiReportService.loadReport(reportId);
     
     // Check if user has access to this report (own report or admin)
-    // Note: Old reports might not have userId, so we allow access for backward compatibility
-    if (req.user?.role !== 'admin' && report.metadata.userId && report.metadata.userId !== userId) {
+    if (req.user?.role !== 'admin' && report.metadata.userId !== userId) {
       return res.status(403).json({
         success: false,
         error: 'Access denied: You can only download your own reports'
@@ -141,10 +150,9 @@ router.get('/stats/overview', async (req, res) => {
     const allReports = await aiReportService.getReportsList();
     
     // Filter reports by user (unless admin)
-    // Note: Old reports might not have userId, so we show them to all users for backward compatibility
     const reports = req.user?.role === 'admin' 
       ? allReports 
-      : allReports.filter(r => !r.metadata.userId || r.metadata.userId === userId);
+      : allReports.filter(r => r.metadata.userId === userId);
     
     const stats = {
       totalReports: reports.length,

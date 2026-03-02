@@ -14,8 +14,8 @@ A full-stack inventory and supply chain management system with AI-powered insigh
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd "FINAL PROJECT -DBMS 2"
+git clone https://github.com/MohitSahoo/LogiCore
+cd "LogiCore"
 ```
 
 2. **Setup Backend**
@@ -306,27 +306,11 @@ psql -U username -d smart_supply_chain -c "\dt"
 
 ---
 
-## 🚀 Deployment
-
-Ready to deploy to production? Deploy for FREE!
-
-**🆓 FREE Forever Deployment:**
-See [DEPLOY_FREE.md](./DEPLOY_FREE.md) for complete step-by-step guide (20 minutes)
-
-**What you get:**
-- ✅ Live website with HTTPS
-- ✅ PostgreSQL database (1GB)
-- ✅ MongoDB database (512MB)
-- ✅ Auto-deploy on git push
-- ✅ $0/month forever
-
-**Platform:** Render + MongoDB Atlas (both free tier)
-
----
-
 ## 📚 Additional Documentation
 
-- **[DEPLOY_FREE.md](./DEPLOY_FREE.md)** - Complete FREE deployment guide
+- **[PROJECT_DESCRIPTION.md](./PROJECT_DESCRIPTION.md)** - Comprehensive project documentation
+- **[API_KEY_ARCHITECTURE.md](./API_KEY_ARCHITECTURE.md)** - AI integration details
+- **[GEMINI_PROMPTS_LOCATION.md](./GEMINI_PROMPTS_LOCATION.md)** - AI prompt documentation
 
 ---
 
@@ -349,6 +333,8 @@ This project is for educational purposes.
 ## 👨‍💻 Authors
 
 - Mohit Sahoo
+- Aamir Ibrahim
+- Anish Agrawal
 
 ---
 
@@ -360,4 +346,4 @@ This project is for educational purposes.
 
 ---
 
-**Need help?** Check [DEPLOY_FREE.md](./DEPLOY_FREE.md) for deployment instructions.
+**Need help?** Check [PROJECT_DESCRIPTION.md](./PROJECT_DESCRIPTION.md) for detailed documentation.

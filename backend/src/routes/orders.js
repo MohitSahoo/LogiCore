@@ -1,8 +1,6 @@
 import express from 'express';
 import { pool } from '../db.js';
 import { authenticateToken, optionalAuth } from '../middleware/auth.js';
-import { validate } from '../middleware/validate.js';
-import { createOrderSchema, updateOrderStatusSchema } from '../validation/schemas.js';
 
 const router = express.Router();
 
@@ -110,7 +108,7 @@ router.get('/:id', authenticateToken, async (req, res) => {
 });
 
 // POST create order
-router.post('/', authenticateToken, validate(createOrderSchema), async (req, res) => {
+router.post('/', authenticateToken, async (req, res) => {
   const client = await pool.connect();
   
   try {
@@ -199,7 +197,7 @@ router.post('/', authenticateToken, validate(createOrderSchema), async (req, res
 });
 
 // PUT update order status
-router.put('/:id', authenticateToken, validate(updateOrderStatusSchema), async (req, res) => {
+router.put('/:id', authenticateToken, async (req, res) => {
   const requestId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   console.log(`\n🔵 [REQUEST ${requestId}] PUT /api/orders/${req.params.id} - START`);
   

@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "id": "weekly_ai_1772446265191",
+    "type": "weekly",
+    "period": "2026-02-23 to 2026-03-02",
+    "generatedAt": "2026-03-02T10:11:05.191Z",
+    "userId": 10,
+    "aiStatus": {
+      "keyUsed": "primary",
+      "usingFallback": false,
+      "primaryFailures": 0
+    },
+    "dataSnapshot": {
+      "totalProducts": 2,
+      "totalValue": 12000,
+      "totalUnits": 93,
+      "ordersInPeriod": 0,
+      "criticalAlerts": 1,
+      "stockHealth": {
+        "normal": 1,
+        "lowStock": 1,
+        "outOfStock": 0,
+        "overstock": 0
+      }
+    },
+    "analysis": {
+      "stockDistribution": {
+        "normal": 1,
+        "lowStock": 1,
+        "outOfStock": 0,
+        "overstock": 0,
+        "normalPercent": 50,
+        "lowStockPercent": 50,
+        "outOfStockPercent": 0,
+        "overstockPercent": 0
+      },
+      "financialMetrics": {
+        "turnoverRisk": "Low",
+        "capitalTiedUp": 0,
+        "reorderInvestment": 0
+      },
+      "topPerformers": [
+        {
+          "id": 24,
+          "name": "laptop-08",
+          "sku": "sku-08",
+          "description": "",
+          "supplier_id": 17,
+          "unit_price": "100.00",
+          "stock_quantity": 90,
+          "reorder_level": 50,
+          "created_at": "2026-02-12T04:25:08.871Z",
+          "updated_at": "2026-02-12T04:27:01.473Z",
+          "user_id": 10,
+          "primary_state": "available",
+          "last_movement_date": "2026-02-12T04:25:08.871Z",
+          "supplier_name": "newsuppppppppppp",
+          "total_value": "9000.00",
+          "stock_status": "NORMAL"
+        },
+        {
+          "id": 26,
+          "name": "iphone17 pro max",
+          "sku": "IND-17",
+          "description": "",
+          "supplier_id": 17,
+          "unit_price": "1000.00",
+          "stock_quantity": 3,
+          "reorder_level": 3,
+          "created_at": "2026-02-12T06:33:43.446Z",
+          "updated_at": "2026-02-12T09:00:50.460Z",
+          "user_id": 10,
+          "primary_state": "available",
+          "last_movement_date": "2026-02-12T06:33:43.446Z",
+          "supplier_name": "newsuppppppppppp",
+          "total_value": "3000.00",
+          "stock_status": "LOW_STOCK"
+        }
+      ],
+      "criticalItems": 1
+    },
+    "optimizations": {
+      "promptTokensUsed": 1384,
+      "analysisDepth": 7,
+      "cacheUsed": false,
+      "generationTime": 12105
+    }
+  },
+  "content": "## Weekly Inventory Report: 2026-02-23 to 2026-03-02\n\n**Prepared For:** Management Team\n**Prepared By:** Expert Inventory Analyst\n**Date:** 2026-03-03\n\n### Executive Summary: Navigating Critical Low Stock Amidst Zero Sales\n\nThis past week, our inventory stands at a total value of **$12,000 across 93 units** of two products. The overall inventory health presents a mixed picture: while we have **no overstocked items**, a critical situation has emerged with the **iphone17 pro max** running dangerously low on stock (3 units remaining). This is our most urgent concern.\n\nCompounding this, we recorded **zero orders and zero sales** for the entire period. This lack of activity is highly unusual and requires immediate investigation, as it significantly impacts our understanding of demand and future inventory planning.\n\n### Inventory Status & Distribution Insights\n\nOur current stock distribution shows a 50/50 split:\n*   **Optimal Stock (50%):** The **laptop-08** is well-stocked with 90 units, representing $9,000 of our total inventory. This product is in a healthy position, posing no immediate concerns.\n*   **Running Low (50%):** The **iphone17 pro max** is critically low with only 3 units left, valued at $3,000. This status means we are at high risk of stockouts, potentially leading to lost sales and customer dissatisfaction once demand resumes.\n*   **No Overstock or Out-of-Stock:** This is positive, indicating efficient inventory management in terms of avoiding excess capital tie-up and complete stockouts (for now).\n\nThe fact that one product is optimal and another is critically low, with no sales recorded, suggests either a very slow period, a reporting anomaly, or a significant shift in demand patterns that needs to be understood.\n\n### Urgent Issues & Actionable Recommendations\n\n1.  **Immediate Priority: Reorder iphone17 pro max.**\n    *   **Issue:** With only 3 units remaining, we are on the verge of a stockout for a high-value product. While the system currently indicates \"need 0 more,\" the \"critically low\" status overrides this and demands action.\n    *   **Recommendation:** Initiate an urgent reorder for the iphone17 pro max. Determine an appropriate reorder quantity based on historical sales data (if available prior to this period) or projected demand to prevent future stock",
+  "rawData": {
+    "currentInventory": [
+      {
+        "id": 24,
+        "name": "laptop-08",
+        "sku": "sku-08",
+        "description": "",
+        "supplier_id": 17,
+        "unit_price": "100.00",
+        "stock_quantity": 90,
+        "reorder_level": 50,
+        "created_at": "2026-02-12T04:25:08.871Z",
+        "updated_at": "2026-02-12T04:27:01.473Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-12T04:25:08.871Z",
+        "supplier_name": "newsuppppppppppp",
+        "total_value": "9000.00",
+        "stock_status": "NORMAL"
+      },
+      {
+        "id": 26,
+        "name": "iphone17 pro max",
+        "sku": "IND-17",
+        "description": "",
+        "supplier_id": 17,
+        "unit_price": "1000.00",
+        "stock_quantity": 3,
+        "reorder_level": 3,
+        "created_at": "2026-02-12T06:33:43.446Z",
+        "updated_at": "2026-02-12T09:00:50.460Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-12T06:33:43.446Z",
+        "supplier_name": "newsuppppppppppp",
+        "total_value": "3000.00",
+        "stock_status": "LOW_STOCK"
+      }
+    ],
+    "inventorySummary": [
+      {
+        "total_products": "2",
+        "total_inventory_value": "12000.00",
+        "average_price": "550.0000000000000000",
+        "total_units": "93",
+        "out_of_stock_count": "0",
+        "low_stock_count": "1",
+        "overstock_count": "0"
+      }
+    ],
+    "ordersInPeriod": [],
+    "topSellingProducts": [],
+    "supplierPerformance": [
+      {
+        "name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "product_count": "2",
+        "total_value": "12000.00",
+        "low_stock_products": "1",
+        "avg_product_price": "550.0000000000000000"
+      }
+    ],
+    "stockAlerts": [
+      {
+        "name": "iphone17 pro max",
+        "sku": "IND-17",
+        "stock_quantity": 3,
+        "reorder_level": 3,
+        "supplier_name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "units_needed": 0,
+        "reorder_cost": "0.00"
+      }
+    ]
+  },
+  "analysis": {
+    "summary": {
+      "totalProducts": 2,
+      "totalValue": 12000,
+      "totalUnits": 93,
+      "avgPrice": 129.03
+    },
+    "stockStatus": {
+      "normal": 1,
+      "lowStock": 1,
+      "outOfStock": 0,
+      "overstock": 0,
+      "normalPercent": 50,
+      "lowStockPercent": 50,
+      "outOfStockPercent": 0,
+      "overstockPercent": 0
+    },
+    "topProducts": [
+      {
+        "id": 24,
+        "name": "laptop-08",
+        "sku": "sku-08",
+        "description": "",
+        "supplier_id": 17,
+        "unit_price": "100.00",
+        "stock_quantity": 90,
+        "reorder_level": 50,
+        "created_at": "2026-02-12T04:25:08.871Z",
+        "updated_at": "2026-02-12T04:27:01.473Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-12T04:25:08.871Z",
+        "supplier_name": "newsuppppppppppp",
+        "total_value": "9000.00",
+        "stock_status": "NORMAL"
+      },
+      {
+        "id": 26,
+        "name": "iphone17 pro max",
+        "sku": "IND-17",
+        "description": "",
+        "supplier_id": 17,
+        "unit_price": "1000.00",
+        "stock_quantity": 3,
+        "reorder_level": 3,
+        "created_at": "2026-02-12T06:33:43.446Z",
+        "updated_at": "2026-02-12T09:00:50.460Z",
+        "user_id": 10,
+        "primary_state": "available",
+        "last_movement_date": "2026-02-12T06:33:43.446Z",
+        "supplier_name": "newsuppppppppppp",
+        "total_value": "3000.00",
+        "stock_status": "LOW_STOCK"
+      }
+    ],
+    "criticalAlerts": [
+      {
+        "name": "iphone17 pro max",
+        "sku": "IND-17",
+        "stock_quantity": 3,
+        "reorder_level": 3,
+        "supplier_name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "units_needed": 0,
+        "reorder_cost": "0.00"
+      }
+    ],
+    "topSuppliers": [
+      {
+        "name": "newsuppppppppppp",
+        "contact_email": "newsup@gmail.com",
+        "product_count": "2",
+        "total_value": "12000.00",
+        "low_stock_products": "1",
+        "avg_product_price": "550.0000000000000000"
+      }
+    ],
+    "periodActivity": {
+      "totalOrders": 0,
+      "totalOrderValue": 0,
+      "topSelling": "None"
+    },
+    "financial": {
+      "turnoverRisk": "Low",
+      "capitalTiedUp": 0,
+      "reorderInvestment": 0
+    }
+  }
+}
