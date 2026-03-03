@@ -522,8 +522,8 @@ export default function AIReports() {
           </Card>
         ) : (
           <div className="space-y-4">
-            {reports.map((report) => (
-              <Card key={report.metadata.id} className="hover:shadow-lg transition-shadow">
+            {reports.map((report, index) => (
+              <Card key={`${report.metadata.id}-${index}`} className="hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
