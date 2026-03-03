@@ -25,8 +25,8 @@ export default function Logo({ size = 'md', showText = true, className = '' }: L
   // Try to load the logo image, fallback to icon if not available
   const [imageError, setImageError] = React.useState(false);
 
-  // Try different image formats
-  const logoSources = ['/logo.svg', '/logo.png', '/logo.jpg'];
+  // Try different image formats (png exists, svg doesn't)
+  const logoSources = ['/logo.png', '/logo.jpg', '/logo.svg'];
   const [currentSource, setCurrentSource] = React.useState(0);
 
   const handleImageError = () => {
