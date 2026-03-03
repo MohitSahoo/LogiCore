@@ -58,13 +58,13 @@ async function seed() {
     console.log('🚀 Starting seed...');
     await client.query('BEGIN');
 
-    // Get the test user ID
-    const userResult = await client.query('SELECT id FROM users WHERE email = $1', ['test@logicore.com']);
+    // Get the admin user ID (created by setup-auth.js)
+    const userResult = await client.query('SELECT id FROM users WHERE email = $1', ['admin@logicore.com']);
     if (userResult.rows.length === 0) {
-      throw new Error('Test user not found. Please run create-test-user.js first.');
+      throw new Error('Admin user not found. Please run setup-auth.js first.');
     }
     const userId = userResult.rows[0].id;
-    console.log(`👤 Using user ID: ${userId}`);
+    console.log(`👤 Using admin user ID: ${userId}`);
 
     // Set the current user context for audit triggers
     await client.query(`SET app.current_user_id = '${userId}'`);

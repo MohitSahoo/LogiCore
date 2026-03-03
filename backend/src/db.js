@@ -11,6 +11,9 @@ export const pool = new Pool({
   database: process.env.PGDATABASE || 'smart_supply_chain',
   user: process.env.PGUSER || 'postgres',
   password: process.env.PGPASSWORD || '',
+  ssl: process.env.PGHOST && process.env.PGHOST !== 'localhost' ? {
+    rejectUnauthorized: false
+  } : false
 });
 
 // Test connection
