@@ -27,8 +27,24 @@ connectMongoDB().catch((err) => {
 });
 
 // Configure CORS to allow Vercel frontend
+const allowedOrigins = [
+  'https://logi-core-gules.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5173'
+];
+
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || '*',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Check if origin is in allowed list or if CORS_ORIGIN is set to *
+    if (process.env.CORS_ORIGIN === '*' || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   optionsSuccessStatus: 200
 };
