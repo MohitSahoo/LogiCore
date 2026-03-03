@@ -19,7 +19,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 4001;
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || '0.0.0.0';
 
 // Initialize MongoDB connection
 connectMongoDB().catch((err) => {
