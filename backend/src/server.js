@@ -26,7 +26,14 @@ connectMongoDB().catch((err) => {
   console.error('⚠️  MongoDB connection failed, continuing without MongoDB features');
 });
 
-app.use(cors());
+// Configure CORS to allow Vercel frontend
+const corsOptions = {
+  origin: process.env.CORS_ORIGIN || '*',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('dev'));
 
