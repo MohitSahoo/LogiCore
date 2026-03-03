@@ -58,7 +58,7 @@ router.get('/alerts', optionalAuth, async (req, res, next) => {
       params.push(req.user.userId);
     }
     
-    query += ` ORDER BY lsa.created_at DESC LIMIT 50`;
+    query += ` ORDER BY lsa.alert_date DESC LIMIT 50`;
     
     const result = await pool.query(query, params);
     res.json(result.rows);
@@ -183,7 +183,7 @@ router.get('/dashboard', optionalAuth, async (req, res, next) => {
     let alertsQuery = `SELECT COUNT(*) as alert_count
                        FROM low_stock_alerts lsa
                        JOIN products p ON lsa.product_id = p.id
-                       WHERE lsa.created_at >= NOW() - INTERVAL '7 days'`;
+                       WHERE lsa.alert_date >= NOW() - INTERVAL '7 days'`;
     let alertsParams = [];
     
     if (req.user && req.query.user_only === 'true') {
