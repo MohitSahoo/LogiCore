@@ -2,7 +2,6 @@
 
 A full-stack inventory and supply chain management system with AI-powered insights, built with React, Node.js, PostgreSQL, and MongoDB.
 
-🌐 **Live Demo:** https://logi-core-gules.vercel.app
 
 ---
 
