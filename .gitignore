@@ -49,6 +49,7 @@ frontend/node_modules/.vite/
 
 # Reports and generated files
 backend/reports/*.json
+!backend/reports/sample_report.json
 
 # Database
 *.sqlite

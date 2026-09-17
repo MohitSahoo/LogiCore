@@ -43,14 +43,3 @@ CREATE TRIGGER update_users_updated_at
     BEFORE UPDATE ON users 
     FOR EACH ROW 
     EXECUTE FUNCTION update_updated_at_column();
-
--- Insert a default admin user (password: admin123)
--- Note: In production, this should be done securely
-INSERT INTO users (email, password_hash, first_name, last_name, role) 
-VALUES (
-    'admin@logicore.com', 
-    '$2b$10$rOzJqQZQZQZQZQZQZQZQZOzJqQZQZQZQZQZQZQZQZOzJqQZQZQZQZQ', -- This will be replaced with actual hash
-    'Admin', 
-    'User', 
-    'admin'
-) ON CONFLICT (email) DO NOTHING;

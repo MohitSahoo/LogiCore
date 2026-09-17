@@ -39,8 +39,13 @@ async function setupAuthTables() {
     await pool.query(`CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON user_sessions(user_id)`);
     await pool.query(`CREATE INDEX IF NOT EXISTS idx_sessions_expires ON user_sessions(expires_at)`);
 
-    // Create a proper admin user with hashed password
-    const adminPassword = 'admin123';
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (!adminEmail || !adminPassword) {
+      throw new Error('ADMIN_EMAIL and ADMIN_PASSWORD must be configured');
+    }
+
     const saltRounds = 10;
     const passwordHash = await bcrypt.hash(adminPassword, saltRounds);
 
@@ -50,12 +55,10 @@ async function setupAuthTables() {
       VALUES ($1, $2, $3, $4, $5) 
       ON CONFLICT (email) 
       DO UPDATE SET password_hash = $2
-    `, ['admin@logicore.com', passwordHash, 'Admin', 'User', 'admin']);
+    `, [adminEmail, passwordHash, 'Admin', 'User', 'admin']);
 
     console.log('✅ Authentication tables created successfully');
-    console.log('✅ Default admin user created:');
-    console.log('   Email: admin@logicore.com');
-    console.log('   Password: admin123');
+    console.log('✅ Admin user created from configured credentials');
     console.log('   Role: admin');
 
     // Test the setup

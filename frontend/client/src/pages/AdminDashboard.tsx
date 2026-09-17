@@ -204,9 +204,7 @@ export default function AdminDashboard() {
               <p className="text-sm">Current User: {currentUser ? `${currentUser.firstName} ${currentUser.lastName}` : 'Not logged in'}</p>
               <p className="text-sm">Email: {currentUser?.email || 'N/A'}</p>
               <p className="text-sm">Role: {currentUser?.role || 'N/A'}</p>
-              <p className="text-sm mt-2">To access admin dashboard:</p>
-              <p className="text-sm">1. Login with: admin@logicore.com / admin123</p>
-              <p className="text-sm">2. Look for "Admin Panel" in sidebar</p>
+              <p className="text-sm mt-2">Sign in with an administrator account, then look for "Admin Panel" in the sidebar.</p>
             </div>
           </div>
         </div>

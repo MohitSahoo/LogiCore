@@ -111,7 +111,7 @@ pnpm run dev
 ### 6. Access Application
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:4001
-- Login: admin@logicore.com / admin123
+- Login with the administrator credentials configured through `ADMIN_EMAIL` and `ADMIN_PASSWORD`.
 
 ---
 

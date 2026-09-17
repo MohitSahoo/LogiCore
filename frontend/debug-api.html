@@ -96,6 +96,14 @@
         async function testLogin() {
             const resultDiv = document.getElementById('auth-result');
             resultDiv.innerHTML = 'Testing login...';
+
+            const email = window.prompt('Email address:');
+            const password = window.prompt('Password:');
+
+            if (!email || !password) {
+                resultDiv.innerHTML = '<div class="error">Email and password are required.</div>';
+                return;
+            }
             
             try {
                 const response = await fetch(`${API_BASE}/auth/login`, {
@@ -104,8 +112,8 @@
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        email: 'test@logicore.com',
-                        password: 'test123'
+                        email,
+                        password
                     })
                 });
                 

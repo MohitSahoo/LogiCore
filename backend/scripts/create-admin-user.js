@@ -4,11 +4,18 @@ import { pool } from '../src/db.js';
 async function createAdminUser() {
   try {
     console.log('🔐 Creating admin user...');
+
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (!adminEmail || !adminPassword) {
+      throw new Error('ADMIN_EMAIL and ADMIN_PASSWORD must be configured');
+    }
     
     // Check if user already exists
     const existingUser = await pool.query(
       'SELECT id, email, role FROM users WHERE email = $1',
-      ['mohitsahoo05@gmail.com']
+      [adminEmail]
     );
 
     if (existingUser.rows.length > 0) {
@@ -18,7 +25,7 @@ async function createAdminUser() {
       if (existingUser.rows[0].role !== 'admin') {
         await pool.query(
           'UPDATE users SET role = $1, updated_at = CURRENT_TIMESTAMP WHERE email = $2',
-          ['admin', 'mohitsahoo05@gmail.com']
+          ['admin', adminEmail]
         );
         console.log('✅ Updated user role to admin');
       } else {
@@ -28,23 +35,21 @@ async function createAdminUser() {
     }
 
     // Hash password
-    const password = 'admin123'; // Default password
     const saltRounds = 10;
-    const passwordHash = await bcrypt.hash(password, saltRounds);
+    const passwordHash = await bcrypt.hash(adminPassword, saltRounds);
 
     // Create admin user
     const result = await pool.query(
       `INSERT INTO users (email, password_hash, first_name, last_name, role, is_active) 
        VALUES ($1, $2, $3, $4, $5, $6) 
        RETURNING id, email, first_name, last_name, role`,
-      ['mohitsahoo05@gmail.com', passwordHash, 'Mohit', 'Sahoo', 'admin', true]
+      [adminEmail, passwordHash, 'Admin', 'User', 'admin', true]
     );
 
     console.log('✅ Admin user created successfully:');
     console.log('📧 Email:', result.rows[0].email);
     console.log('👤 Name:', result.rows[0].first_name, result.rows[0].last_name);
     console.log('🔑 Role:', result.rows[0].role);
-    console.log('🔒 Password: admin123 (please change after first login)');
 
   } catch (error) {
     console.error('❌ Error creating admin user:', error);
